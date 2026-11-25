@@ -1,0 +1,50 @@
+#nullable enable
+
+namespace Softplan.Soft.Suite.Dje.Sdk
+{
+    public partial interface IPdpjClient
+    {
+        /// <summary>
+        /// Atualizar uma pessoa física conforme dados da Receita Federal.<br/>
+        /// Atualizar uma pessoa física conforme dados da Receita Federal.
+        /// </summary>
+        /// <param name="tenantId"></param>
+        /// <param name="idPessoa"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Softplan.Soft.Suite.Dje.Sdk.ApiException"></exception>
+        global::System.Threading.Tasks.Task<byte[]> AtualizarAsync(
+            global::System.Guid tenantId,
+            long idPessoa,
+            global::Softplan.Soft.Suite.Dje.Sdk.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Atualizar uma pessoa física conforme dados da Receita Federal.<br/>
+        /// Atualizar uma pessoa física conforme dados da Receita Federal.
+        /// </summary>
+        /// <param name="tenantId"></param>
+        /// <param name="idPessoa"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Softplan.Soft.Suite.Dje.Sdk.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::System.IO.Stream> AtualizarAsStreamAsync(
+            global::System.Guid tenantId,
+            long idPessoa,
+            global::Softplan.Soft.Suite.Dje.Sdk.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Atualizar uma pessoa física conforme dados da Receita Federal.<br/>
+        /// Atualizar uma pessoa física conforme dados da Receita Federal.
+        /// </summary>
+        /// <param name="tenantId"></param>
+        /// <param name="idPessoa"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Softplan.Soft.Suite.Dje.Sdk.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Softplan.Soft.Suite.Dje.Sdk.AutoSDKHttpResponse<byte[]>> AtualizarAsResponseAsync(
+            global::System.Guid tenantId,
+            long idPessoa,
+            global::Softplan.Soft.Suite.Dje.Sdk.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

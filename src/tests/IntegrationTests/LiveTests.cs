@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Loud.Technology.Dje.Sdk.IntegrationTests;
+namespace Softplan.Soft.Suite.Dje.Sdk.IntegrationTests;
 
 [TestClass]
 public sealed class LiveTests

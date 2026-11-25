@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace Loud.Technology.Dje.Sdk;
+namespace Softplan.Soft.Suite.Dje.Sdk;
 
 public sealed partial class DjeClient
 {

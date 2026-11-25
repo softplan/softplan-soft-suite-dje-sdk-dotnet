@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Loud.Technology.Dje.Sdk;
+namespace Softplan.Soft.Suite.Dje.Sdk;
 
 internal sealed record DjeTokenResponse(
     [property: JsonPropertyName("access_token")] string? AccessToken,

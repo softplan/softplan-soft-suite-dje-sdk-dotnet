@@ -2,7 +2,7 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
-namespace Loud.Technology.Dje.Sdk;
+namespace Softplan.Soft.Suite.Dje.Sdk;
 
 internal sealed class DjeAuthenticationHandler : DelegatingHandler
 {

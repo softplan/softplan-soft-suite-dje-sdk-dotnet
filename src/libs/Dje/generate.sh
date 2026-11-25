@@ -18,7 +18,7 @@ mv openapi.json.tmp openapi.json
 rm -rf Generated
 
 autosdk generate openapi.json \
-  --namespace Loud.Technology.Dje.Sdk \
+  --namespace Softplan.Soft.Suite.Dje.Sdk \
   --clientClassName DjeClient \
   --targetFramework net10.0 \
   --output Generated \

@@ -2,7 +2,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace Loud.Technology.Dje.Sdk.IntegrationTests;
+namespace Softplan.Soft.Suite.Dje.Sdk.IntegrationTests;
 
 [TestClass]
 public sealed class AuthenticationTests

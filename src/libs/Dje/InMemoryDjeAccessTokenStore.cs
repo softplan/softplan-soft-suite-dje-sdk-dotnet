@@ -1,4 +1,4 @@
-namespace Loud.Technology.Dje.Sdk;
+namespace Softplan.Soft.Suite.Dje.Sdk;
 
 internal sealed class InMemoryDjeAccessTokenStore : IDjeAccessTokenStore
 {

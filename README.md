@@ -37,7 +37,7 @@ The generated default base URL and the token URL in the specification are the CN
 ### NuGet.org
 
 ```bash
-dotnet add package Dje.Cnj
+dotnet add package Softplan.SoftSuite.Dje.Cnj
 ```
 
 ### GitHub Packages
@@ -57,7 +57,7 @@ dotnet nuget add source \
   --name softplan \
   "https://nuget.pkg.github.com/softplan/index.json"
 
-dotnet add package Dje.Cnj \
+dotnet add package Softplan.SoftSuite.Dje.Cnj \
   --source "https://nuget.pkg.github.com/softplan/index.json"
 ```
 

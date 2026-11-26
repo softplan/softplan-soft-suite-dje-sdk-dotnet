@@ -1,4 +1,4 @@
-namespace Loud.Technology.Dje.Sdk;
+namespace Softplan.Soft.Suite.Dje.Sdk;
 
 /// <summary>
 /// Keeps the access token of one set of client credentials, so several clients and processes can share it.

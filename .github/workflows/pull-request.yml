@@ -12,7 +12,7 @@ env:
   DOTNET_NOLOGO: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   CONFIGURATION: Release
-  SOLUTION: Loud.Technology.Dje.Sdk.slnx
+  SOLUTION: Softplan.Soft.Suite.Dje.Sdk.slnx
 
 jobs:
   test:

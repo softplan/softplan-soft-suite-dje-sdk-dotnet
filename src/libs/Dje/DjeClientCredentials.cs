@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Loud.Technology.Dje.Sdk;
+namespace Softplan.Soft.Suite.Dje.Sdk;
 
 /// <summary>
 /// OAuth2 client credentials for the CNJ token endpoint and the User-Agent the CNJ requires on every request.

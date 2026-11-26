@@ -75,7 +75,7 @@
       "Code": "using var client = DjeClient.CreateFromEnvironment();\n\nvar response = await client.Representantes.ListarRepresentadosAsync(\n    dataInicio: global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::System.DateTime\u003E(\n    @\u0022\u0022\u00222022-06-08T00:00:00Z\u0022\u0022\u0022)!,\n    dataFim: global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::System.DateTime\u003E(\n    @\u0022\u0022\u00222022-06-08T23:00:00Z\u0022\u0022\u0022)!\n);",
       "Format": "sdk",
       "OperationId": "listarRepresentados",
-      "Setup": "This example assumes \u0060using Loud.Technology.Dje.Sdk;\u0060 is in scope and a configured credential environment variable is set: \u0060DJE_ACCESS_TOKEN\u0060."
+      "Setup": "This example assumes \u0060using Softplan.Soft.Suite.Dje.Sdk;\u0060 is in scope and a configured credential environment variable is set: \u0060DJE_ACCESS_TOKEN\u0060."
     },
     {
       "Order": 8,

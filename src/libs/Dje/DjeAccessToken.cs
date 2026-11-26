@@ -1,4 +1,4 @@
-namespace Loud.Technology.Dje.Sdk;
+namespace Softplan.Soft.Suite.Dje.Sdk;
 
 /// <summary>
 /// An access token issued by the CNJ token endpoint.

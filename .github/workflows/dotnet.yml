@@ -19,8 +19,8 @@ env:
   DOTNET_NOLOGO: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   CONFIGURATION: Release
-  SOLUTION: Loud.Technology.Dje.Sdk.slnx
-  PROJECT: src/libs/Dje/Loud.Technology.Dje.Sdk.csproj
+  SOLUTION: Softplan.Soft.Suite.Dje.Sdk.slnx
+  PROJECT: src/libs/Dje/Softplan.Soft.Suite.Dje.Sdk.csproj
 
 jobs:
   build-test-pack:
@@ -80,7 +80,7 @@ jobs:
           name: nuget-packages
           path: artifacts
 
-      - name: Configure loud-technology GitHub Packages source
+      - name: Configure Softplan GitHub Packages source
         shell: bash
         env:
           GITHUB_PACKAGES_TOKEN: ${{ github.token }}

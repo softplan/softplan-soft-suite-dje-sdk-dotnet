@@ -4,7 +4,7 @@
   <p><strong>A .NET client for the CNJ Domicílio Judicial Eletrônico API, with OAuth2 client credentials built in.</strong></p>
   <p>Generated C# operations from the DJE OpenAPI specification, plus one small hand-written layer that gets and renews the access token and sends the User-Agent the CNJ requires.</p>
 
-  [![CI](https://github.com/loud-technology/loud-technology-dje-sdk/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/loud-technology/loud-technology-dje-sdk/actions/workflows/dotnet.yml)
+  [![CI](https://github.com/softplan/softplan-soft-suite-dje-sdk-dotnet/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/softplan/softplan-soft-suite-dje-sdk-dotnet/actions/workflows/dotnet.yml)
   [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
   [![.NET 10](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
 </div>
@@ -12,7 +12,7 @@
 ---
 
 > [!NOTE]
-> This community SDK is maintained by loud-technology and generated from the DJE OpenAPI specification. It is not an official CNJ SDK.
+> This community SDK is maintained by Softplan and generated from the DJE OpenAPI specification. It is not an official CNJ SDK.
 
 ## What you get
 
@@ -42,7 +42,7 @@ dotnet add package Dje.Cnj
 
 ### GitHub Packages
 
-The same package is published to the [loud-technology GitHub Packages registry](https://github.com/orgs/loud-technology/packages?repo_name=loud-technology-dje-sdk). GitHub requires authentication to download NuGet packages.
+The same package is published to the [Softplan GitHub Packages registry](https://github.com/orgs/softplan/packages?repo_name=softplan-soft-suite-dje-sdk-dotnet). GitHub requires authentication to download NuGet packages.
 
 Create a [personal access token (classic)](https://github.com/settings/tokens) with the `read:packages` scope, then register the source once:
 
@@ -54,20 +54,20 @@ dotnet nuget add source \
   --username "$GITHUB_PACKAGES_USER" \
   --password "$GITHUB_PACKAGES_TOKEN" \
   --store-password-in-clear-text \
-  --name loud-technology \
-  "https://nuget.pkg.github.com/loud-technology/index.json"
+  --name softplan \
+  "https://nuget.pkg.github.com/softplan/index.json"
 
 dotnet add package Dje.Cnj \
-  --source "https://nuget.pkg.github.com/loud-technology/index.json"
+  --source "https://nuget.pkg.github.com/softplan/index.json"
 ```
 
-Use a token limited to `read:packages`, never commit it, and authorize it for the organization if loud-technology enforces SAML SSO.
+Use a token limited to `read:packages`, never commit it, and authorize it for the organization if Softplan enforces SAML SSO.
 
 ## Quick start
 
 ```csharp
 using System.Text.Json;
-using Loud.Technology.Dje.Sdk;
+using Softplan.Soft.Suite.Dje.Sdk;
 
 var credentials = new DjeClientCredentials
 {
@@ -186,10 +186,10 @@ cd src/libs/Dje
 The script downloads `https://gateway.stg.cloud.pje.jus.br/domicilio-eletronico-hml/v3/api-docs` into `openapi.json`, replaces `Generated/`, and creates a .NET 10 client with Bearer authentication. The gateway returns some schema properties in a different order on each request. `apply-openapi-overrides.py` sorts them so that two runs against an unchanged specification produce identical files. It also removes the accents from the tag names, so the tag `Comunicação` becomes `client.Comunicacao`.
 
 ```text
-Loud.Technology.Dje.Sdk.slnx
+Softplan.Soft.Suite.Dje.Sdk.slnx
 ├── src/
 │   ├── libs/Dje/
-│   │   ├── Loud.Technology.Dje.Sdk.csproj
+│   │   ├── Softplan.Soft.Suite.Dje.Sdk.csproj
 │   │   ├── openapi.json
 │   │   ├── generate.sh
 │   │   ├── apply-openapi-overrides.py
@@ -204,9 +204,9 @@ Loud.Technology.Dje.Sdk.slnx
 ## Build and test
 
 ```bash
-dotnet restore Loud.Technology.Dje.Sdk.slnx
-dotnet build Loud.Technology.Dje.Sdk.slnx --configuration Release --no-restore
-dotnet test Loud.Technology.Dje.Sdk.slnx --configuration Release --no-build
+dotnet restore Softplan.Soft.Suite.Dje.Sdk.slnx
+dotnet build Softplan.Soft.Suite.Dje.Sdk.slnx --configuration Release --no-restore
+dotnet test Softplan.Soft.Suite.Dje.Sdk.slnx --configuration Release --no-build
 ```
 
 The contract tests run without a network. They check the default base URL, the Bearer header, the listing request, the token form, the User-Agent on both calls, the 401 renewal with a resent body, and token expiry. The live test runs only when `DJE_CLIENT_ID`, `DJE_CLIENT_SECRET`, `DJE_TENANT_ID`, and `DJE_USER_AGENT` are set. Otherwise MSTest marks it inconclusive.
@@ -220,7 +220,7 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-The CI workflow restores, builds, tests, and packs in `Release`. Version tags publish the same `.nupkg` to both NuGet.org and the loud-technology GitHub Packages registry. GitHub Packages uses the workflow `GITHUB_TOKEN`. NuGet.org uses Trusted Publishing, which exchanges a GitHub OIDC token for a short-lived API key. For that, create the `nuget-org` environment in the repository settings, set the `NUGET_USER` Actions variable to your NuGet.org profile username, and add a Trusted Publishing policy for this repository on NuGet.org. Untagged builds are retained as artifacts and are not published.
+The CI workflow restores, builds, tests, and packs in `Release`. Version tags publish the same `.nupkg` to both NuGet.org and the Softplan GitHub Packages registry. GitHub Packages uses the workflow `GITHUB_TOKEN`. NuGet.org uses Trusted Publishing, which exchanges a GitHub OIDC token for a short-lived API key. For that, create the `nuget-org` environment in the repository settings, set the `NUGET_USER` Actions variable to your NuGet.org profile username, and add a Trusted Publishing policy for this repository on NuGet.org. Untagged builds are retained as artifacts and are not published.
 
 ## Contributing
 
@@ -233,7 +233,7 @@ Generated files are intentionally committed so package builds are deterministic 
 
 ## Security and support
 
-- Report SDK bugs through [GitHub Issues](https://github.com/loud-technology/loud-technology-dje-sdk/issues).
+- Report SDK bugs through [GitHub Issues](https://github.com/softplan/softplan-soft-suite-dje-sdk-dotnet/issues).
 - For DJE behavior, credentials, or access, contact the CNJ through the channels it provides to API clients.
 - Do not disclose client secrets, access tokens, or production URLs in public issues.
 
